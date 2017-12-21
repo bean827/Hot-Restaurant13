@@ -72,7 +72,7 @@ app.get("/add", function(req, res) {
 });
 
 //Route to the 
-app.get("/all", function(req, res) {
+app.get("/tables&waitlist", function(req, res) {
     res.sendFile(path.join(__dirname, "all.html"));
 });
 

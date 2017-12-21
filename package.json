@@ -1,5 +1,5 @@
 {
-  "name": "Hot-Restaurant13",
+  "name": "hot-restaurant13",
   "version": "1.0.0",
   "description": "Hot Restaurant in class activity",
   "main": "server.js",
@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/bean827/Hot-Restaurant13.git"
   },
-  "keywords": [],
+
   "author": "",
   "license": "ISC",
   "bugs": {

@@ -1,0 +1,24 @@
+{
+  "name": "Hot-Restaurant13",
+  "version": "1.0.0",
+  "description": "Hot Restaurant in class activity",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bean827/Hot-Restaurant13.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bean827/Hot-Restaurant13/issues"
+  },
+  "homepage": "https://github.com/bean827/Hot-Restaurant13#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}

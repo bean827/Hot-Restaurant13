@@ -72,8 +72,8 @@ app.get("/add", function(req, res) {
 });
 
 //Route to the 
-app.get("/tables&waitlist", function(req, res) {
-    res.sendFile(path.join(__dirname, "all.html"));
+app.get("/tables", function(req, res) {
+    res.sendFile(path.join(__dirname, "tables.html"));
 });
 
 //Route to the 

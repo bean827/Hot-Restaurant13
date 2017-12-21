@@ -17,19 +17,33 @@
             <hr>
             <h3 class="text-center">We only have 5 tables! Book your seat before they all are gone!</h3>
             <div class="text-center">
-                <a href="/table">
-                    <button type="button" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-list-alt"></span> View Tables</button>
+                <a href="/tables&waitlist">
+                    <button type="button" class="btn btn-primary btn-lg" id="tablebutton"><span class="glyphicon glyphicon-list-alt"></span> View Tables</button>
                 </a>
-                <a href="/reserve">
-                    <button type="button" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-credit-card"></span> Make Reservation</button>
+                <a href="/add">
+                    <button type="button" class="btn btn-danger btn-lg" id="reservebutton"><span class="glyphicon glyphicon-credit-card"></span> Make Reservation</button>
                 </a>
             </div>
         </div>
     </div>
     <div class="container">
-        <a href="/api/tables">API Table Link</a>|
-        <a href="/api/waitlist">API Wait List</a>
+        <a id="apitable" href="/api/tables">API Table Link</a>|
+        <a id="waitlist" href="/api/waitlist">API Wait List</a>
     </div>
+    <script type="text/javascript">
+    // $("#tablebutton").on("click", function() {
+    //     $.get("/all", function(data) {});
+    // });
+    // $("#reservebutton").on("click", function() {
+    //     $.get("/add", function(data) {});
+    // });
+    $("#apitable").on("click", function() {
+        $.get("/api/tables", function(data) {});
+    });
+    $("#waitlist").on("click", function() {
+        $.get("/api/waitlist", function(data) {});
+    });
+    </script>
 </body>
 
 </html>

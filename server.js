@@ -67,8 +67,8 @@ app.get("/add", function(req, res) {
 });
 
 //Route to the 
-app.get("/tables&waitlist", function(req, res) {
-    res.sendFile(path.join(__dirname, "tables.html"));
+app.get("/all", function(req, res) {
+    res.sendFile(path.join(__dirname, "all.html"));
 });
 
 // Create New Reservation - takes in JSON input

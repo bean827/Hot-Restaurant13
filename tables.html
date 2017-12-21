@@ -32,7 +32,7 @@
                   <div class="panel-heading">
                     <h3 class="panel-title"><strong>Current Reservations</strong></h3>
                   </div>
-                  <div class="panel-body" id="well-section">
+                  <div class="panel-body" id="reserved-table-section">
                   </div>
 
                 </div>
@@ -47,7 +47,7 @@
               <div class="panel-heading">
                 <h3 class="panel-title"><strong>WaitList</strong></h3>
               </div>
-              <div class="panel-body" id="well-section">
+              <div class="panel-body" id="waitlist-section">
 
               </div>
             </div>
@@ -61,31 +61,31 @@
       <script type="text/javascript">
 
         $.get("/api/tables", function(data) {
-          // for (var i = 0; i < data.length; i++) {
-          //   var wellSection = $("<div>");
-          //   wellSection.addClass("well");
-          //   wellSection.attr("id", "character-well-" + i);
-          //   $("#well-section").append(wellSection);
+          for (var i = 0; i < data.length; i++) {
+            var tableRow = $("<div>");
+            tableRow.addClass("well");
+            tableRow.attr("id", "table-number" + i);
+            $("#reserved-table-section").append(tableRow);
 
-          //   $("#character-well-" + i).append("<h2>" + data[i].name + "</h2>");
-          //   $("#character-well-" + i).append("<h3>Role: " + data[i].role + "</h4>");
-          //   $("#character-well-" + i).append("<h3>Age: " + data[i].age + "</h4>");
-          //   $("#character-well-" + i).append("<h3>Force Points: " + data[i].forcePoints + "</h4>");
-          // }
+            $("#table-number" + i).append("<h2>" + data[i].name + "</h2>");
+            $("#table-number" + i).append("<h3>Phone: " + data[i].phone + "</h4>");
+            $("#table-number" + i).append("<h3>E-Mail: " + data[i].email + "</h4>");
+            $("#table-number" + i).append("<h3>Unique ID: " + data[i].uniqueID + "</h4>");
+          }
         });
 
-        $.get("/api/WaitList", function(data) {
-          // for (var i = 0; i < data.length; i++) {
-          //   var wellSection = $("<div>");
-          //   wellSection.addClass("well");
-          //   wellSection.attr("id", "character-well-" + i);
-          //   $("#well-section").append(wellSection);
+        $.get("/api/waitList", function(data) {
+          for (var i = 0; i < data.length; i++) {
+            var tableRow = $("<div>");
+            tableRow.addClass("well");
+            tableRow.attr("id", "wait-number" + i);
+            $("#waitlist-section").append(tableRow);
 
-          //   $("#character-well-" + i).append("<h2>" + data[i].name + "</h2>");
-          //   $("#character-well-" + i).append("<h3>Role: " + data[i].role + "</h4>");
-          //   $("#character-well-" + i).append("<h3>Age: " + data[i].age + "</h4>");
-          //   $("#character-well-" + i).append("<h3>Force Points: " + data[i].forcePoints + "</h4>");
-          // }
+            $("#wait-number" + i).append("<h2>" + data[i].name + "</h2>");
+            $("#wait-number" + i).append("<h3>Phone: " + data[i].phone + "</h4>");
+            $("#wait-number" + i).append("<h3>E-Mail: " + data[i].email + "</h4>");
+            $("#wait-number" + i).append("<h3>Unique ID: " + data[i].uniqueID + "</h4>");
+          }
         });
       </script>
 

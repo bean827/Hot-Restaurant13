@@ -92,7 +92,7 @@ app.post("/api/newreservation", function(req, res) {
     // req.body hosts is equal to the JSON post sent from the user
     // This works because of our body-parser middleware
     var newreservation = req.body;
-
+    var reservationstatus = "";
 
     // Using a RegEx Pattern to remove spaces from newCharacter
     // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
@@ -102,12 +102,19 @@ app.post("/api/newreservation", function(req, res) {
 
     if (tables.length < 5) {
         tables.push(newreservation);
+        reservationstatus = "reserved"
     } else {
         waitlist.push(newreservation);
+        reservationstatus = "waitlist"
     };
 
-    res.json(newreservation);
-});
+    If(reservationstatus ==="reserved"){
+        res.json({message: "Your table is reserved "});
+    } else {
+        res.json({message: "Sorry we are currently booked, but we have put you on the waitlist."});
+    } //if
+    
+});  //app.post
 
 
 

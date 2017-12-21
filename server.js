@@ -108,12 +108,12 @@ app.post("/api/newreservation", function(req, res) {
         reservationstatus = "waitlist"
     };
 
-    If(reservationstatus ==="reserved"){
+    if(reservationstatus ==="reserved"){
         res.json({message: "Your table is reserved "});
     } else {
         res.json({message: "Sorry we are currently booked, but we have put you on the waitlist."});
     } //if
-    
+
 });  //app.post
 
 
